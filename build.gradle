@@ -1,0 +1,19 @@
+plugins {
+	id 'org.asciidoctor.jvm.convert' version '3.0.0'
+}
+
+repositories {
+	mavenCentral()
+}
+
+asciidoctor {
+	attributes([
+		stylesheet: "css/custom.css"	
+	])	
+	resources {
+		from 'src/docs/resources'
+	}
+	asciidoctorj {
+		fatalWarnings ".*"
+	}
+}
